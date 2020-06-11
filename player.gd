@@ -3,8 +3,11 @@ extends KinematicBody2D
 export (int) var speed = 200
 
 var velocity = Vector2()
-var _position_last_frame := Vector2()
+var screen_size
 
+func _ready():
+	screen_size = get_viewport_rect().size
+	
 func get_input():
 	velocity = Vector2()
 	if Input.is_action_pressed('right'):
