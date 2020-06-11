@@ -1,10 +1,16 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Player+Enemys/Player/player_walking_0.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Player+Enemys/Player/Back/Idle1/player_idle_back1.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Particle1.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Tilemaps/Desert.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Player+Enemys/Player/player_walking_1.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Player+Enemys/Player/Back/WalkUp/player_walking_up_1.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Player+Enemys/Player/Front/Idle1/player_idle_front1.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Player+Enemys/Player/Front/WalkDown/player_walking_down_0.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Player+Enemys/Player/Back/Idle1/player_idle_back2.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Player+Enemys/Player/Front/WalkDown/player_walking_down_1.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Player+Enemys/Player/Back/WalkUp/player_walking_up_0.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Player+Enemys/Player/Front/Idle1/player_idle_front2.png" type="Texture" id=11]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Desert.png 0"
@@ -92,18 +98,33 @@
 5/shapes = [  ]
 5/z_index = 0
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "walk",
-"speed": 5.0
+"name": "idle_front",
+"speed": 1.15
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "idle_back",
+"speed": 1.15
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "walk_up",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "walk_down",
+"speed": 2.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 8.35165, 16.3673 )
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 4.54172, 9.01317 )
 
-[sub_resource type="ParticlesMaterial" id=3]
+[sub_resource type="ParticlesMaterial" id=4]
 flag_disable_z = true
 direction = Vector3( 100, 100, 100 )
 gravity = Vector3( 0, 98, 0 )
@@ -133,18 +154,21 @@ script = ExtResource( 1 )
 speed = 50
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
-position = Vector2( 268.824, 97.8001 )
-frames = SubResource( 4 )
-animation = "walk"
+position = Vector2( 268.824, 104.021 )
+scale = Vector2( 1.01815, 1.00648 )
+frames = SubResource( 2 )
+animation = "idle_back"
 frame = 1
 playing = true
+centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
-position = Vector2( 268.824, 97.8001 )
-shape = SubResource( 2 )
+visible = false
+position = Vector2( 268.824, 104.021 )
+shape = SubResource( 3 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
 visible = false
 lifetime = 4.0
-process_material = SubResource( 3 )
+process_material = SubResource( 4 )
 texture = ExtResource( 3 )

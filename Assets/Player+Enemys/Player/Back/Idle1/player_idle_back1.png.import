@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player_walking_1.png-bffb87b797d3e34cf17503799996a128.stex"
+path="res://.import/player_idle_back1.png-18e716575cfb6fa6317db1b0c8fd6ddc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player+Enemys/Player/player_walking_1.png"
-dest_files=[ "res://.import/player_walking_1.png-bffb87b797d3e34cf17503799996a128.stex" ]
+source_file="res://Assets/Player+Enemys/Player/Back/Idle1/player_idle_back1.png"
+dest_files=[ "res://.import/player_idle_back1.png-18e716575cfb6fa6317db1b0c8fd6ddc.stex" ]
 
 [params]
 
