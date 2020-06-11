@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player_standing.png-ccfa23829f791a5ff9dbffbcfec619cc.stex"
+path="res://.import/GOOGLE_0004_O.png-69fc071337c777906af5f4ca6a7a5f32.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player+Enemys/Player/player_standing.png"
-dest_files=[ "res://.import/player_standing.png-ccfa23829f791a5ff9dbffbcfec619cc.stex" ]
+source_file="res://Assets/Items/Collectables/GOOGLE_0004_O.png"
+dest_files=[ "res://.import/GOOGLE_0004_O.png-69fc071337c777906af5f4ca6a7a5f32.stex" ]
 
 [params]
 

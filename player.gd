@@ -3,6 +3,7 @@ extends KinematicBody2D
 export (int) var speed = 200
 
 var velocity = Vector2()
+var _position_last_frame := Vector2()
 
 func get_input():
 	velocity = Vector2()
@@ -19,3 +20,11 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	move_and_slide(velocity)
+
+func _process(delta):
+	if Input.is_action_pressed("down"):
+		$AnimatedSprite.play("walk_down")
+	elif Input.is_action_pressed("up"):
+		$AnimatedSprite.play("walk_up")
+	else:
+		$AnimatedSprite.stop()
