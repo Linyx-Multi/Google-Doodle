@@ -1,9 +1,10 @@
-extends Area2D
+extends KinematicBody2D
 
 export (int) var speed = 200
 
 var velocity = Vector2()
 var screen_size
+export (int) var max_health = 100
 
 func _ready():
 	screen_size = get_viewport_rect().size
