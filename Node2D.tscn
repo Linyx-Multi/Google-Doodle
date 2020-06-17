@@ -203,7 +203,6 @@ position = Vector2( 319.954, 87.6964 )
 scale = Vector2( 1.22604, 0.848527 )
 frames = SubResource( 3 )
 animation = "idle_back"
-frame = 1
 playing = true
 centered = false
 
