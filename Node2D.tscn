@@ -142,17 +142,12 @@
 8/shapes = [  ]
 8/z_index = 0
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 10 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "walk_up",
 "speed": 2.0
-}, {
-"frames": [ ExtResource( 2 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "idle_back",
-"speed": 1.15
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 11 ) ],
 "loop": true,
@@ -163,9 +158,14 @@ animations = [ {
 "loop": true,
 "name": "walk_down",
 "speed": 2.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "idle_back",
+"speed": 1.15
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 4.54172, 9.01317 )
 
 [sub_resource type="ParticlesMaterial" id=4]
@@ -199,9 +199,9 @@ tile_data = PoolIntArray( 0, 1, 0, 1, 2, 0, 2, 0, 0, 3, 0, 0, 4, 1, 0, 5, 3, 0, 
 script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
-position = Vector2( 319.954, 87.6964 )
+position = Vector2( 167.432, 68.7439 )
 scale = Vector2( 1.22604, 0.848527 )
-frames = SubResource( 3 )
+frames = SubResource( 2 )
 animation = "idle_back"
 playing = true
 centered = false
@@ -210,7 +210,7 @@ centered = false
 visible = false
 position = Vector2( 323.712, 87.6964 )
 scale = Vector2( 1.20418, 0.843064 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
 visible = false
