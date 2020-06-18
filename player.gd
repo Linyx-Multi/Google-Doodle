@@ -28,8 +28,8 @@ func get_input():
 #move and slide velocity stuff
 func _physics_process(delta):
 	get_input()
-	move_and_slide(velocity)
-
+	velocity = move_and_slide(velocity)
+	
 #animations
 func _process(delta):
 	if Input.is_action_pressed("down"):
