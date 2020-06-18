@@ -74,7 +74,6 @@ __meta__ = {
 margin_left = 104.0
 margin_right = 120.0
 margin_bottom = 40.0
-step = 1.0
 texture_under = ExtResource( 4 )
 texture_progress = ExtResource( 5 )
 fill_mode = 3
