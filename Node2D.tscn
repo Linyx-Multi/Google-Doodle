@@ -203,16 +203,15 @@ tile_data = PoolIntArray( 0, 1, 0, 1, 2, 0, 2, 0, 0, 3, 0, 0, 4, 1, 0, 5, 3, 0, 
 
 [node name="GUI" parent="." instance=ExtResource( 15 )]
 
-[node name="Player" type="Area2D" parent="."]
+[node name="Player" type="KinematicBody2D" parent="."]
 script = ExtResource( 1 )
-speed = null
-max_health = null
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
 position = Vector2( 167.432, 68.7439 )
 scale = Vector2( 1.22604, 0.848527 )
 frames = SubResource( 2 )
 animation = "idle_back"
+frame = 1
 playing = true
 centered = false
 
