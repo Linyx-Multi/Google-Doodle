@@ -1,4 +1,4 @@
-""" extends Area2D
+extends KinematicBody2D
 
 #speed and HP export.
 export (int) var speed = 200
@@ -37,4 +37,4 @@ func _process(delta):
 	elif Input.is_action_pressed("up"):
 		$AnimatedSprite.play("walk_up")
 	else:
-		$AnimatedSprite.stop() """
+		$AnimatedSprite.stop()
