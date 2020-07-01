@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends Area2D
 
 #speed and HP export.
 export (int) var speed = 200

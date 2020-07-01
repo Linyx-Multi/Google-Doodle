@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends Area2D
 
 var _velocity: = Vector2()
 var rng = RandomNumberGenerator.new

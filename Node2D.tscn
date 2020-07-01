@@ -193,19 +193,9 @@ extents = Vector2( 10, 7.58414 )
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 1.26733, 8.276 )
 
-[node name="Node2D" type="Node2D" groups=[
-"AI",
-"Google",
-"Persist",
-"Player",
-"UI",
-"World",
-]]
+[node name="Node2D" type="Node2D"]
 
-[node name="TileMap" type="TileMap" parent="." groups=[
-"Persist",
-"World",
-]]
+[node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 32, 32 )
 format = 1
@@ -213,16 +203,12 @@ tile_data = PoolIntArray( 0, 1, 0, 1, 2, 0, 2, 0, 0, 3, 0, 0, 4, 1, 0, 5, 3, 0, 
 
 [node name="GUI" parent="." instance=ExtResource( 15 )]
 
-[node name="Player" type="Area2D" parent="." groups=[
-"Persist",
-"Player",
-]]
+[node name="Player" type="Area2D" parent="."]
 script = ExtResource( 1 )
+speed = null
+max_health = null
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Player" groups=[
-"Persist",
-"Player",
-]]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
 position = Vector2( 167.432, 68.7439 )
 scale = Vector2( 1.22604, 0.848527 )
 frames = SubResource( 2 )
@@ -230,10 +216,7 @@ animation = "idle_back"
 playing = true
 centered = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" groups=[
-"Persist",
-"Player",
-]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 visible = false
 position = Vector2( 323.712, 87.6964 )
 scale = Vector2( 1.20418, 0.843064 )
@@ -245,7 +228,7 @@ lifetime = 4.0
 process_material = SubResource( 4 )
 texture = ExtResource( 3 )
 
-[node name="G" type="KinematicBody2D" parent="."]
+[node name="G" type="Area2D" parent="."]
 position = Vector2( 358.947, 222.105 )
 script = ExtResource( 16 )
 
@@ -257,19 +240,13 @@ position = Vector2( -7.62939e-06, 3.05176e-05 )
 scale = Vector2( 1.37594, 1 )
 texture = ExtResource( 14 )
 
-[node name="L" type="Area2D" parent="." groups=[
-"Google",
-]]
+[node name="L" type="Area2D" parent="."]
 
-[node name="Sprite" type="Sprite" parent="L" groups=[
-"Google",
-]]
+[node name="Sprite" type="Sprite" parent="L"]
 position = Vector2( 987.558, 576.256 )
 scale = Vector2( 0.578527, 1 )
 texture = ExtResource( 13 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="L" groups=[
-"Google",
-]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="L"]
 position = Vector2( 987.558, 576.256 )
 shape = SubResource( 6 )
