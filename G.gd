@@ -12,13 +12,8 @@ func _physics_process(delta):
 	position = _teleport_pos
 
 func _process(delta):
-	pass
-
-
-
-
-func _get_pos():
 	while true:
 		_teleport_pos.x = _rng.randi_range(1, 100)
 		_teleport_pos.y = _rng.randi_range(1, 100)
-		# yield()
+		print(_teleport_pos)
+		yield(get_tree().create_timer(5.0),"timeout")
